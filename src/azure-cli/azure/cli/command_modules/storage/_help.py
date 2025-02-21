@@ -1462,6 +1462,9 @@ examples:
     text: az storage container create -n mystoragecontainer --fail-on-exist
   - name: Create a storage container in a storage account and allow public read access for blobs.
     text: az storage container create -n mystoragecontainer --public-access blob
+  - name: Create a storage container in a PartitionedDNS enabled storage account. The identifier for the DNS zone always begins with z and can range from z00 to z50.
+    text: az storage container create -n mystoragecontainer --account-name mystorageaccount --account-key "enter-your-storage_account-key" --blob-endpoint "https://mystorageaccount.z3.blob.storage.azure.net/"
+  
 """
 
 helps['storage container delete'] = """
